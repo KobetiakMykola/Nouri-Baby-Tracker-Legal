@@ -1,0 +1,69 @@
+/* Nouri Baby — site styles.
+   Tokens lifted from the app's NouriTheme so the site and the product read
+   as one thing. */
+:root {
+  --bg: #FBF8F5;
+  --card: #FFFFFF;
+  --ink: #221B16;
+  --mute: #7A6E64;
+  --dim: #9C8E83;
+  --line: #EAE0D6;
+  --soft: #F6EAE2;
+  --soft-ink: #7A4A32;
+  --clay: #B4714E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17120F; --card: #211A15; --ink: #F6F1EC; --mute: #A29385;
+    --dim: #8C7A6C; --line: #302620; --soft: #2A1E17; --soft-ink: #E3B393;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 96px; }
+header { margin-bottom: 40px; }
+.eyebrow {
+  font: 600 11px/1 ui-monospace, Menlo, monospace;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--clay);
+}
+h1 { font-size: 38px; line-height: 1.15; letter-spacing: -.03em; font-weight: 500; margin: 14px 0 0; }
+h2 { font-size: 21px; letter-spacing: -.01em; font-weight: 600; margin: 40px 0 10px; }
+h3 { font-size: 17px; font-weight: 600; margin: 26px 0 6px; }
+p, li { color: var(--mute); }
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 7px; }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--clay); }
+a:hover { color: #8A5238; }
+.updated { font: 500 13px/1.5 ui-monospace, Menlo, monospace; color: var(--dim); margin-top: 12px; }
+.langs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+.langs a {
+  text-decoration: none; font-size: 13px; font-weight: 600;
+  padding: 7px 14px; border-radius: 12px;
+  background: var(--card); border: 1px solid var(--line); color: var(--mute);
+}
+.langs a[aria-current="true"] { background: var(--clay); border-color: var(--clay); color: #fff; }
+.note {
+  background: var(--soft); border: 1px solid var(--line);
+  border-radius: 18px; padding: 18px 20px; margin: 22px 0;
+}
+.note p { color: var(--soft-ink); margin: 0; }
+.cards { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; margin-top: 28px; }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+.cards a {
+  display: block; text-decoration: none; padding: 20px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+}
+.cards a span { display: block; color: var(--mute); font-size: 14px; margin-top: 4px; }
+.cards a strong { font-size: 17px; }
+footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); }
+footer p { font-size: 14px; color: var(--dim); }
