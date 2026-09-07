@@ -10,21 +10,17 @@ icon.png            app icon, used as favicon and og:image
 en/ uk/ es/         privacy.html and terms.html per language
 ```
 
-## Before publishing — replace these placeholders
+## Who these name
 
-They appear in every document. Search for the square brackets:
+Developer: **Mykola Kobetiak** · Contact: **kobetiakm@gmail.com** ·
+Governing law: **the Province of Manitoba, Canada**.
 
-| Placeholder | What to put |
-|---|---|
-| `[DEVELOPER LEGAL NAME]` / `[ЮРИДИЧНА НАЗВА РОЗРОБНИКА]` / `[NOMBRE LEGAL DEL DESARROLLADOR]` | The name you registered with Apple |
-| `[CONTACT EMAIL]` / `[КОНТАКТНА ПОШТА]` / `[CORREO DE CONTACTO]` | A support address you actually monitor |
-| `[JURISDICTION]` / `[ЮРИСДИКЦІЯ]` / `[JURISDICCIÓN]` | Country/state whose law governs the terms |
+The developer name is written in Latin script in all three languages, so it
+matches the name on the Apple Developer account rather than transliterating
+per language.
 
-Find them all:
-
-```bash
-grep -rn '\[' --include="*.html" . | grep -E '\[[A-ZА-ЯÁÉÍÓÚÑ ]+\]'
-```
+The `[your name]` / `[ваше імʼя]` / `[tu nombre]` in the iCloud deletion
+instructions is deliberate — that is how iOS labels the row in Settings.
 
 ## Publishing on GitHub Pages
 
