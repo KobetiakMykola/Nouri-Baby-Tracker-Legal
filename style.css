@@ -94,6 +94,15 @@ h1 {
 }
 .pill i { font-style: normal; margin-right: 7px; }
 
+.hero .source {
+  max-width: 520px;
+  margin: 18px auto 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--mute);
+}
+.hero .source a { color: var(--ink); text-underline-offset: 2px; }
+
 /* ── Language switcher ───────────────────────────────────────────── */
 .langs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
 .langs a {
